@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auto Close Extension Options</title>
+    <style>
+      h3 {
+        margin: 12px 0 0;
+      }
+
+      p {
+        margin: 0 0 0 4px;
+      }
+
+      main {
+        padding: 8px;
+        max-width: 400px;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+      }
+
+      input[type='text'] {
+        border: 1px solid #8c8c8c;
+        border-radius: 4px;
+        padding: 4px 8px;
+        flex-grow: 1;
+      }
+
+      button {
+        border: 1px solid #8c8c8c;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 8px;
+        font-size: 1rem;
+        padding: 2px 8px;
+      }
+
+      #status {
+        margin-left: 8px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      #status.show {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>You can specify the target as a regular expression.</h3>
+    <main>
+      <p>e.g. https://.*\.zoom\.us/</p>
+
+      <option-list id="options"></option-list>
+
+      <form id="form">
+        <input type="text" id="addInput" placeholder="input regular expression"></input>
+        <button id="addButton">+</button>
+        <span id="status">Saved.</span>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

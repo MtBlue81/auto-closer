@@ -1,8 +1,9 @@
 {
-  "name": "auto-close",
-  "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "name": "auto-closer",
+  "version": "1.0.0",
+  "description": "An Chrome extension that just close the tabs you don't need.",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js"
