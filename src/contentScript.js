@@ -5,4 +5,4 @@ setTimeout(() => {
   chrome.runtime.sendMessage({
     type: CLOSE_TAB_TYPE,
   });
-}, 1000);
+}, 3000);
