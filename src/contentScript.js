@@ -1,5 +1,5 @@
-'use strict';
-import { CLOSE_TAB_TYPE } from './background';
+"use strict";
+import { CLOSE_TAB_TYPE } from "./background";
 
 setTimeout(() => {
   chrome.runtime.sendMessage({
