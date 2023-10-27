@@ -59,50 +59,6 @@ class OptionList extends HTMLElement {
   constructor(...args) {
     super(...args);
     const shadow = this.attachShadow({ mode: "open" });
-    const style = document.createElement("style");
-
-    style.textContent = `
-      .list {
-        margin: 12px 0;
-        padding: 0 0 0 4px;
-        max-width: 400px;
-      }
-
-      .item {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #8c8c8c;
-        padding: 4px;
-        box-sizing: border-box;
-      }
-
-      .button {
-        text-decoration: none;
-        user-select: none;
-        background: transparent;
-        padding:  0;
-        margin: 0;
-        border: 0;
-        appearance: none;
-        -webkit-tap-highlight-color: transparent;
-        font-size: 1rem;
-        text-align: center;
-        flex-basis: 1.4rem;
-        cursor: pointer;
-        color: #8c8c8c;
-        flex-shrink: 0;
-      }
-
-      .button::focus {
-        border: 1px solid black;
-      }
-
-      .label {
-        flex-grow: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    `;
     shadow.appendChild(this.style);
   }
 
