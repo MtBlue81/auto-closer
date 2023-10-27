@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
 class OptionList extends HTMLElement {
   static get observedAttributes() {
-    return ['options'];
+    return ["options"];
   }
 
   get root() {
-    return this.shadowRoot.querySelector('.list');
+    return this.shadowRoot.querySelector(".list");
   }
 
   get style() {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       .list {
         margin: 12px 0;
@@ -58,8 +58,8 @@ class OptionList extends HTMLElement {
 
   constructor(...args) {
     super(...args);
-    const shadow = this.attachShadow({mode: 'open'});
-    const style = document.createElement('style');
+    const shadow = this.attachShadow({ mode: "open" });
+    const style = document.createElement("style");
 
     style.textContent = `
       .list {
@@ -107,7 +107,9 @@ class OptionList extends HTMLElement {
   }
 
   parseOptions() {
-    return this.getAttribute('options') ? this.getAttribute('options').split(',') : [];
+    return this.getAttribute("options")
+      ? this.getAttribute("options").split(",")
+      : [];
   }
 
   addOption(text) {
@@ -116,26 +118,26 @@ class OptionList extends HTMLElement {
   }
 
   fireRemoveEvent(detail) {
-    const event = new CustomEvent('remove', {
+    const event = new CustomEvent("remove", {
       bubbles: true,
       composed: true,
       detail,
-    })
-    this.dispatchEvent(event)
+    });
+    this.dispatchEvent(event);
   }
 
   buildOption(text) {
-    const wrapper = document.createElement('li');
-    wrapper.setAttribute('class', 'item');
+    const wrapper = document.createElement("li");
+    wrapper.setAttribute("class", "item");
 
-    const label = document.createElement('span');
-    label.setAttribute('class', 'label');
-    label.setAttribute('title', text);
+    const label = document.createElement("span");
+    label.setAttribute("class", "label");
+    label.setAttribute("title", text);
     label.textContent = text;
 
-    const removeButton = document.createElement('button');
-    removeButton.setAttribute('class', 'button');
-    removeButton.textContent = 'x';
+    const removeButton = document.createElement("button");
+    removeButton.setAttribute("class", "button");
+    removeButton.textContent = "x";
     removeButton.onclick = () => {
       this.fireRemoveEvent(text);
       this.root.removeChild(wrapper);
@@ -151,10 +153,10 @@ class OptionList extends HTMLElement {
     if (this.root) {
       this.shadowRoot.remove(this.root);
     }
-    const root = document.createElement('ul');
-    root.setAttribute('class', 'list');
+    const root = document.createElement("ul");
+    root.setAttribute("class", "list");
     this.shadowRoot.appendChild(root);
-    this.options.forEach(option => this.addOption(option));
+    this.options.forEach((option) => this.addOption(option));
   }
 }
 

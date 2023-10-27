@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class OptionsData {
   constructor() {
@@ -6,18 +6,21 @@ class OptionsData {
   }
 
   async restore() {
-    return new Promise(resolve => {
-      chrome.storage.sync.get({
-        options: [],
-      }, ({ options }) => {
-        this.options = options;
-        resolve(options);
-      });
+    return new Promise((resolve) => {
+      chrome.storage.sync.get(
+        {
+          options: [],
+        },
+        ({ options }) => {
+          this.options = options;
+          resolve(options);
+        }
+      );
     });
   }
 
   async store() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       chrome.storage.sync.set({ options: this.options }, () => resolve());
     });
   }
@@ -28,7 +31,7 @@ class OptionsData {
   }
 
   async remove(option) {
-    this.options = this.options.filter(o => o !== option);
+    this.options = this.options.filter((o) => o !== option);
     return this.store();
   }
 
