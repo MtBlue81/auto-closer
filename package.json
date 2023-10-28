@@ -1,6 +1,6 @@
 {
   "name": "auto-closer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "An Chrome extension that just close the tabs you don't need.",
   "private": true,
   "license": "MIT",
