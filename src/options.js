@@ -9,6 +9,7 @@ const options = new OptionsData();
 const $list = document.getElementById("options");
 const $addInput = document.getElementById("addInput");
 const $status = document.getElementById("status");
+const $delayInput = document.getElementById("delay");
 
 const showStatus = () => {
   $status.classList.add("show");
@@ -19,9 +20,15 @@ const showStatus = () => {
 
 const restoreOptions = async () => {
   await options.restore();
-  $list.setAttribute("options", options.data);
+  $list.setAttribute("options", options.options);
   $list.addEventListener("remove", async ({ detail }) => {
     await options.remove(detail);
+    showStatus();
+  });
+  $delayInput.value = options.delay;
+  $delayInput.addEventListener("change", async (e) => {
+    options.delay = e.target.value;
+    await options.store();
     showStatus();
   });
 };

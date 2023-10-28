@@ -19,9 +19,27 @@
       form {
         display: flex;
         align-items: center;
+        width: 100%;
+        gap: 8px;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
       }
 
-      input[type='text'] {
+      fieldset {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        width: 100%;
+      }
+
+      input[type='text'], input[type='number'] {
         border: 1px solid #8c8c8c;
         border-radius: 4px;
         padding: 4px 8px;
@@ -56,8 +74,18 @@
       <option-list id="options"></option-list>
 
       <form id="form">
-        <input type="text" id="addInput" placeholder="input regular expression"></input>
-        <button id="addButton">+</button>
+        <div>
+          <fieldset>
+            <input type="text" id="addInput" placeholder="input regular expression"></input>
+            <button id="addButton">+</button>
+          </fieldset>
+          <fieldset>
+            <label>
+              close delay (seconds):
+              <input type="number" id="delay"></input>
+            </label>
+          </fieldset>
+        </div>
         <span id="status">Saved.</span>
       </form>
     </main>
