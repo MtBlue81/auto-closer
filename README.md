@@ -4,7 +4,7 @@ An Chrome extension that just close the tabs you don't need.
 
 ## Install
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+[**Chrome** extension](https://chromewebstore.google.com/detail/auto-closer/ligkadlbclfnnfgjmeplpebnjdgcembn)
 
 ## Usage
 1. Add your site URL. (as a regular expression)
