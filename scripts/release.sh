@@ -20,17 +20,17 @@ fi
 
 echo "==> Updating version to ${VERSION}..."
 cd "$ROOT_DIR"
-npm version "$VERSION" --no-git-tag-version
+pnpm version "$VERSION" --no-git-tag-version
 sed -i '' "s/\"version\": \".*\"/\"version\": \"${VERSION}\"/" public/manifest.json
 
 echo "==> Building..."
-npm run build
+pnpm build
 
 echo "==> Creating zip..."
 (cd build && zip -r "../${ZIP_NAME}" .)
 
 echo "==> Committing and pushing..."
-git add package.json package-lock.json public/manifest.json
+git add package.json pnpm-lock.yaml public/manifest.json
 git commit -m "Bump ${TAG}"
 git push
 
