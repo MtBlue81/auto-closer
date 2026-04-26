@@ -11,3 +11,5 @@
 npm-debug.log*
 
 size-plugin.json
+
+.claude/settings.local.json
