@@ -4,7 +4,7 @@
   "description": "An Chrome extension that just close the tabs you don't need.",
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@11.0.8",
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js"
