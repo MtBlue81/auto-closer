@@ -9,16 +9,16 @@ importers:
   .:
     devDependencies:
       copy-webpack-plugin:
-        specifier: ^14.0.0
+        specifier: 14.0.0
         version: 14.0.0(webpack@5.106.2)
       webpack:
-        specifier: ^5.106.2
+        specifier: 5.106.2
         version: 5.106.2(webpack-cli@7.0.2)
       webpack-cli:
-        specifier: ^7.0.2
+        specifier: 7.0.2
         version: 7.0.2(webpack@5.106.2)
       webpack-merge:
-        specifier: ^6.0.1
+        specifier: 6.0.1
         version: 6.0.1
 
 packages:

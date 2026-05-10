@@ -10,9 +10,9 @@
     "build": "webpack --mode=production --config config/webpack.config.js"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^14.0.0",
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2",
-    "webpack-merge": "^6.0.1"
+    "copy-webpack-plugin": "14.0.0",
+    "webpack": "5.106.2",
+    "webpack-cli": "7.0.2",
+    "webpack-merge": "6.0.1"
   }
 }
