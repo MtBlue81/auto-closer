@@ -6,13 +6,10 @@
   "license": "MIT",
   "packageManager": "pnpm@11.0.8",
   "scripts": {
-    "watch": "webpack --mode=development --watch --config config/webpack.config.js",
-    "build": "webpack --mode=production --config config/webpack.config.js"
+    "watch": "esbuild src/contentScript.js src/background.js src/options.js --bundle --outdir=build --watch",
+    "build": "rm -rf build && cp -r public build && esbuild src/contentScript.js src/background.js src/options.js --bundle --minify --outdir=build"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "14.0.0",
-    "webpack": "5.106.2",
-    "webpack-cli": "7.0.2",
-    "webpack-merge": "6.0.1"
+    "esbuild": "^0.28.0"
   }
 }
