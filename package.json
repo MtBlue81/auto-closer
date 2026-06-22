@@ -10,6 +10,6 @@
     "build": "rm -rf build && cp -r public build && esbuild src/contentScript.js src/background.js src/options.js --bundle --minify --outdir=build"
   },
   "devDependencies": {
-    "esbuild": "0.28.0"
+    "esbuild": "0.28.1"
   }
 }
