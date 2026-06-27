@@ -4,7 +4,7 @@
   "description": "An Chrome extension that just close the tabs you don't need.",
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@11.3.0",
+  "packageManager": "pnpm@11.9.0",
   "scripts": {
     "watch": "esbuild src/contentScript.js src/background.js src/options.js --bundle --outdir=build --watch",
     "build": "rm -rf build && cp -r public build && esbuild src/contentScript.js src/background.js src/options.js --bundle --minify --outdir=build"
